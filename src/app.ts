@@ -1,14 +1,14 @@
-import { Application,Request,Response } from 'express';
+import { Application, Request, Response } from 'express'
 import express = require('express')
-import * as cors from 'cors'
+import cors = require('cors')
 
-const app : Application = express()
+const app: Application = express()
+app.use(express.json())
 app.use(cors())
-app.use(express.json());
-app.use(express.urlencoded({extended:true}))
-app.get('/', (req:Request, res:Response) => {
+
+app.use(express.urlencoded({ extended: true }))
+app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!')
 })
 
-
-export default app;
+export default app
