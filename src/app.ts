@@ -11,7 +11,7 @@ app.use(cors())
 // app.use(express.urlencoded({ extended: true }))
 // application routess....
 app.use('/api/v1/users/', userRouter)
-app.get('/', async (req: Request, res: Response) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('University management working successfully!')
 })
 
