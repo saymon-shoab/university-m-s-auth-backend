@@ -1,14 +1,16 @@
-import { Application,Request,Response } from 'express';
+import { Application, Request, Response } from 'express'
 import express = require('express')
-import * as cors from 'cors'
+import cors = require('cors')
+import userRouter from './app/modules/users/user.route'
 
-const app : Application = express()
+const app: Application = express()
+// perser..
+app.use(express.json())
 app.use(cors())
-app.use(express.json());
-app.use(express.urlencoded({extended:true}))
-app.get('/', (req:Request, res:Response) => {
-  res.send('Hello World!')
+
+app.use('/api/v1/users/', userRouter)
+app.get('/', (req: Request, res: Response) => {
+  res.send('University management working successfully!')
 })
 
-
-export default app;
+export default app
