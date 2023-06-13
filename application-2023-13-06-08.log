@@ -2,35 +2,35 @@
   message: 'database connection successfull',
   level: 'info',
   label: 'PHU',
-  timestamp: '2023-06-04T20:08:25.168Z'
+  timestamp: '2023-06-13T02:01:41.641Z'
 }
 {
   message: 'Example app listening on port 5050',
   level: 'info',
   label: 'PHU',
-  timestamp: '2023-06-04T20:08:25.177Z'
+  timestamp: '2023-06-13T02:01:41.649Z'
 }
 {
   message: 'database connection successfull',
   level: 'info',
   label: 'PHU',
-  timestamp: '2023-06-04T20:10:45.620Z'
+  timestamp: '2023-06-13T02:04:46.525Z'
 }
 {
   message: 'Example app listening on port 5050',
   level: 'info',
   label: 'PHU',
-  timestamp: '2023-06-04T20:10:45.629Z'
+  timestamp: '2023-06-13T02:04:46.535Z'
 }
 {
   message: 'database connection successfull',
   level: 'info',
   label: 'PHU',
-  timestamp: '2023-06-04T20:12:40.967Z'
+  timestamp: '2023-06-13T02:05:35.777Z'
 }
 {
   message: 'Example app listening on port 5050',
   level: 'info',
   label: 'PHU',
-  timestamp: '2023-06-04T20:12:40.976Z'
+  timestamp: '2023-06-13T02:05:35.785Z'
 }
