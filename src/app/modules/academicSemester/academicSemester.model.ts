@@ -41,6 +41,9 @@ const academicSeesterSchema = new Schema<IAcademicSemester>(
   },
   {
     timestamps: true,
+    toJSON: {
+      virtuals: true,
+    },
   }
 )
 academicSeesterSchema.pre('save', async function (next) {
