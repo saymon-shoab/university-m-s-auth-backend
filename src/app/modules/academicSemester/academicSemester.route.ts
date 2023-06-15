@@ -10,4 +10,15 @@ router.post(
   academicSemesterConroller.createSemester
   // UserController.createUser
 )
+router.get('/:id', academicSemesterConroller.getSingleSemester)
+router.patch(
+  '/:id',
+  validateRequest(academicSemesterValidation.updateAcademicSemesterZodSchema),
+  academicSemesterConroller.updateSemester
+)
+
+router.delete('/:id', academicSemesterConroller.deleteSemester)
+
+router.get('/', academicSemesterConroller.getSemester)
+
 export const AcademicSemesterRoutes = router

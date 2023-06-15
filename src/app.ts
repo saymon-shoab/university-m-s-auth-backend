@@ -5,6 +5,7 @@ import globelErrorHandler from './app/middlewares/globerErrorHandler'
 // import { AcademicSemesterRoutes } from './app/modules/academicSemester/academicSemester.route'
 import routes from './app/routes'
 // import ApiError from './errors/ApiError'
+import status from 'http-status'
 
 const app: Application = express()
 // perser..
@@ -21,5 +22,22 @@ app.use('/api/v1/', routes)
 // })
 // global error handler....
 app.use(globelErrorHandler)
+
+// handle not found....
+app.use(
+  (req: express.Request, res: express.Response, next: express.NextFunction) => {
+    res.status(status.NOT_FOUND).json({
+      success: false,
+      message: 'Non Found',
+      errorMessage: [
+        {
+          path: req.originalUrl,
+          message: 'API Not Found...',
+        },
+      ],
+    })
+    next()
+  }
+)
 
 export default app

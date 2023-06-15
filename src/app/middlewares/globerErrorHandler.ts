@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-import { ErrorRequestHandler } from 'express'
+import { ErrorRequestHandler, NextFunction, Request, Response } from 'express'
 import { IGenericErrorMessage } from '../../interfaces/error'
 import handleValidationError from '../../errors/handleValidationError'
 import config from '../../config'
@@ -8,8 +8,14 @@ import ApiError from '../../errors/ApiError'
 import { errorLogger } from '../../shared/logger'
 import { ZodError } from 'zod'
 import handleZodError from '../../errors/handleZodError'
+import handleCastError from '../../errors/handleCastError'
 
-const globelErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
+const globelErrorHandler: ErrorRequestHandler = (
+  err,
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   config.env === 'development'
     ? console.log('globel error handler', err)
     : errorLogger.error('glober error handler ~', err)
@@ -39,6 +45,11 @@ const globelErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
           },
         ]
       : []
+  } else if (err?.name === 'CastError') {
+    const simplifiedError = handleCastError(err)
+    statusCode = simplifiedError.statusCode
+    message = simplifiedError.message
+    errorMessages = simplifiedError.errorMessage
   } else if (err instanceof Error) {
     message = err?.message
     errorMessages = err?.message
@@ -56,8 +67,8 @@ const globelErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
     message,
     errorMessages,
     stack: config.env !== 'production' ? err?.stack : undefined,
-  })
-  next()
+  }),
+    next()
 }
 
 export default globelErrorHandler
