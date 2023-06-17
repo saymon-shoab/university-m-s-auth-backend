@@ -8,7 +8,6 @@ router.post(
   '/create-faculty',
   validateRequest(AcadeemicFacultyValidation.createFacultyZodSchema),
   AcademicFacultyController.createFaculty
-  // UserController.createUser
 )
 router.get('/:id', AcademicFacultyController.getSingleFaculty)
 router.patch(

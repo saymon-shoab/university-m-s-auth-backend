@@ -6,10 +6,10 @@ import { Response } from 'express'
 import sendResponse from '../../../shared/sendResponse'
 // import HttpStatus from 'http-status'
 
-const createUser: RequestHandler = catchAsync(
+const createStudent: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
-    const { user } = req.body
-    const result = await UserService.createUser(user)
+    const { student, ...userData } = req.body
+    const result = await UserService.createStudent(student, userData)
 
     sendResponse(res, {
       statusCode: 400,
@@ -21,5 +21,5 @@ const createUser: RequestHandler = catchAsync(
 )
 
 export const UserController = {
-  createUser,
+  createStudent,
 }

@@ -6,6 +6,8 @@ import globelErrorHandler from './app/middlewares/globerErrorHandler'
 import routes from './app/routes'
 // import ApiError from './errors/ApiError'
 import status from 'http-status'
+// import { generateFacultyId } from './app/modules/user/user.utils'
+// import { generateStudentrId } from './app/modules/user/user.utils'
 
 const app: Application = express()
 // perser..
@@ -39,5 +41,15 @@ app.use(
     next()
   }
 )
+
+// const academicSemester = {
+//   code: '01',
+//   year: '2025',
+// }
+// const testId = async () => {
+//   const testId = await generateFacultyId(academicSemester)
+//   console.log(testId)
+// }
+// testId()
 
 export default app
