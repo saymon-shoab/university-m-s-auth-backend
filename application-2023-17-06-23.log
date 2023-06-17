@@ -2,11 +2,11 @@
   message: 'database connection successfull',
   level: 'info',
   label: 'PHU',
-  timestamp: '2023-06-16T10:42:08.943Z'
+  timestamp: '2023-06-17T17:10:37.177Z'
 }
 {
   message: 'Example app listening on port 5050',
   level: 'info',
   label: 'PHU',
-  timestamp: '2023-06-16T10:42:08.957Z'
+  timestamp: '2023-06-17T17:10:37.202Z'
 }
