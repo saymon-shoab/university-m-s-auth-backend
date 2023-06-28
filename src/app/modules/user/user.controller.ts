@@ -7,19 +7,7 @@ import sendResponse from '../../../shared/sendResponse'
 import { IUser } from './user.interface'
 import httpStatus from 'http-status'
 
-// const createStudent: RequestHandler = catchAsync(
-//   async (req: Request, res: Response) => {
-//     const { student, ...userData } = req.body
-//     const result = await UserService.createStudent(student, userData)
 
-//     sendResponse<IUser>(res, {
-//       statusCode: httpStatus.Ok,
-//       success: true,
-//       message: 'user created successfully',
-//       data: result,
-//     })
-//   }
-// )
 const createStudent: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const { student, ...userData } = req.body

@@ -33,3 +33,20 @@
   timestamp: '2023-06-04T02:51:32.676Z'
 }
 { level: 'error', label: 'PHU', timestamp: '2023-06-16T04:45:34.380Z' }
+{
+  level: 'error',
+  message: 'server connection failed The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.',
+  stack: 'MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n' +
+    '    at _createMongoClient (/home/saymon/web-2/UMS/university-m-s-auth-backend/node_modules/mongoose/lib/connection.js:805:11)\n' +
+    '    at NativeConnection.openUri (/home/saymon/web-2/UMS/university-m-s-auth-backend/node_modules/mongoose/lib/connection.js:742:29)\n' +
+    '    at Mongoose.connect (/home/saymon/web-2/UMS/university-m-s-auth-backend/node_modules/mongoose/lib/index.js:406:15)\n' +
+    '    at /home/saymon/web-2/UMS/university-m-s-auth-backend/src/server.ts:20:20\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /home/saymon/web-2/UMS/university-m-s-auth-backend/src/server.ts:8:71\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at __awaiter (/home/saymon/web-2/UMS/university-m-s-auth-backend/src/server.ts:4:12)\n' +
+    '    at DBCoccection (/home/saymon/web-2/UMS/university-m-s-auth-backend/src/server.ts:29:12)\n' +
+    '    at Object.<anonymous> (/home/saymon/web-2/UMS/university-m-s-auth-backend/src/server.ts:41:1)',
+  label: 'PHU',
+  timestamp: '2023-06-27T20:54:29.391Z'
+}
