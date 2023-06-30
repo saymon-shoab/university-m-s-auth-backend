@@ -1,6 +1,6 @@
 import { Model, Types } from 'mongoose'
-import { IAcademicFaculty } from '../academicFaculty/academicFaculty.interface'
-import { IAcademicDepartment } from '../academicDepartment/academicDepartment.interface'
+import { IAcademicDepartment } from '../academicDepartment/academicDepartment.interfaces'
+import { IAcademicFaculty } from '../academicFaculty/academicFaculty.interfaces'
 import { IAcademicSemester } from '../academicSemester/academicSemester.interface'
 
 export type UserName = {
@@ -8,6 +8,7 @@ export type UserName = {
   lastName: string
   middleName: string
 }
+
 export type Guardian = {
   fatherName: string
   fatherOccupation: string
@@ -44,6 +45,8 @@ export type IStudent = {
   profileImage?: string
 }
 
+export type StudentModel = Model<IStudent, Record<string, unknown>>
+
 export type IStudentFilters = {
   searchTerm?: string
   id?: string
@@ -52,4 +55,3 @@ export type IStudentFilters = {
   contactNo?: string
   emergencyContactNo?: string
 }
-export type StudentModel = Model<IStudent, Record<string, unknown>>

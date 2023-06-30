@@ -1,7 +1,7 @@
 import { z } from 'zod'
-import { bloodGroup, gender } from './user.constant'
+import { bloodGroup, gender } from '../student/student.constant'
 
-const createStudentZodSchema = z.object({
+const createUserZodSchema = z.object({
   body: z.object({
     password: z.string().optional(),
 
@@ -89,7 +89,7 @@ const createStudentZodSchema = z.object({
     }),
   }),
 })
-// await createUserZodSchema.parseAsync(req)
+
 const createFacultyZodSchema = z.object({
   body: z.object({
     password: z.string().optional(),
@@ -210,7 +210,7 @@ const createAdminZodSchema = z.object({
 })
 
 export const UserValidation = {
-  createStudentZodSchema,
+  createUserZodSchema,
   createFacultyZodSchema,
   createAdminZodSchema,
 }

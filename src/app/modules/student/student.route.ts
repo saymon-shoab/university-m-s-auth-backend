@@ -1,24 +1,18 @@
 import express from 'express'
-import { studentController } from './student.controller'
-import validateRequest from '../../middlewares/validationRequest'
+import validateRequest from '../../middlewares/validateRequest'
+import { StudentController } from './student.controller'
 import { StudentValidaion } from './student.validation'
-
 const router = express.Router()
 
-router.get('/:id', studentController.getSingleStudent)
-router.get('/', studentController.getAllStudent)
+router.get('/:id', StudentController.getSingleStudent)
+router.get('/', StudentController.getAllStudents)
 
-router.delete('/:id', studentController.deleteStudent)
+router.delete('/:id', StudentController.deleteStudent)
 
-// create student ...
 router.patch(
   '/:id',
   validateRequest(StudentValidaion.updateStudentZodSchema),
-  studentController.updateStudent
+  StudentController.updateStudent
 )
-
-// create faculty ...
-
-// create admin..
 
 export const StudentRoutes = router

@@ -1,4 +1,4 @@
-export type IPaginationOption = {
+export type IPaginationOptions = {
   page?: number
   limit?: number
   sortBy?: string

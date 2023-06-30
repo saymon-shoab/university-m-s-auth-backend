@@ -2,7 +2,12 @@ import httpStatus from 'http-status'
 import mongoose from 'mongoose'
 import config from '../../../config/index'
 import ApiError from '../../../errors/ApiError'
+import { IAcademicSemester } from '../academicSemester/academicSemester.interface'
 import { AcademicSemester } from '../academicSemester/academicSemester.model'
+import { IAdmin } from '../admin/admin.interface'
+import { Admin } from '../admin/admin.model'
+import { IFaculty } from '../faculty/faculty.interface'
+import { Faculty } from '../faculty/faculty.model'
 import { IStudent } from '../student/student.interface'
 import { Student } from '../student/student.model'
 import { IUser } from './user.interface'
@@ -12,11 +17,6 @@ import {
   generateFacultyId,
   generateStudentId,
 } from './user.utils'
-import { IFaculty } from '../faculty/faculty.interface'
-import { Faculty } from '../faculty/faculty.model'
-import { IAdmin } from '../admin/admin.interface'
-import { Admin } from '../admin/admin.model'
-// import bcrypt from 'bcrypt'
 
 const createStudent = async (
   student: IStudent,
@@ -32,14 +32,16 @@ const createStudent = async (
 
   const academicsemester = await AcademicSemester.findById(
     student.academicSemester
-  )
+  ).lean()
 
   // generate student id
   let newUserAllData = null
   const session = await mongoose.startSession()
   try {
     session.startTransaction()
-    const id = await generateStudentId(academicsemester)
+
+    const id = await generateStudentId(academicsemester as IAcademicSemester)
+
     user.id = id
     student.id = id
 
@@ -67,8 +69,6 @@ const createStudent = async (
     await session.endSession()
     throw error
   }
-
-  //user --> student ---> academicSemester, academicDepartment , academicFaculty
 
   if (newUserAllData) {
     newUserAllData = await User.findOne({ id: newUserAllData.id }).populate({
@@ -98,6 +98,7 @@ const createFaculty = async (
   if (!user.password) {
     user.password = config.default_faculty_pass as string
   }
+
   // set role
   user.role = 'faculty'
 
@@ -150,7 +151,6 @@ const createFaculty = async (
 
   return newUserAllData
 }
-
 const createAdmin = async (
   admin: IAdmin,
   user: IUser
@@ -159,6 +159,7 @@ const createAdmin = async (
   if (!user.password) {
     user.password = config.default_admin_pass as string
   }
+
   // set role
   user.role = 'admin'
 

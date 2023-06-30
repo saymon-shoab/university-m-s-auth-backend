@@ -3,17 +3,18 @@
 import mongoose, { SortOrder } from 'mongoose'
 import { paginationHelpers } from '../../../helpers/paginationHelper'
 import { IGenericResponse } from '../../../interfaces/common'
+import { IPaginationOptions } from '../../../interfaces/pagination'
+
 import httpStatus from 'http-status'
 import ApiError from '../../../errors/ApiError'
 import { User } from '../user/user.model'
 import { facultySearchableFields } from './faculty.constant'
 import { IFaculty, IFacultyFilters } from './faculty.interface'
 import { Faculty } from './faculty.model'
-import { IPaginationOption } from '../../../interfaces/pagination'
 
 const getAllFaculties = async (
   filters: IFacultyFilters,
-  paginationOptions: IPaginationOption
+  paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IFaculty[]>> => {
   const { searchTerm, ...filtersData } = filters
   const { page, limit, skip, sortBy, sortOrder } =

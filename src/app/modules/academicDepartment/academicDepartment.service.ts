@@ -1,17 +1,17 @@
 import { SortOrder } from 'mongoose'
 import { paginationHelpers } from '../../../helpers/paginationHelper'
 import { IGenericResponse } from '../../../interfaces/common'
+import { IPaginationOptions } from '../../../interfaces/pagination'
 import { academicDepartmentSearchableFields } from './academicDepartment.constants'
 import {
   IAcademicDepartment,
   IAcademicDepartmentFilters,
-} from './academicDepartment.interface'
+} from './academicDepartment.interfaces'
 import { AcademicDepartment } from './academicDepartment.model'
-import { IPaginationOption } from '../../../interfaces/pagination'
 
 const getAllDepartments = async (
   filters: IAcademicDepartmentFilters,
-  paginationOptions: IPaginationOption
+  paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IAcademicDepartment[]>> => {
   const { limit, page, skip, sortBy, sortOrder } =
     paginationHelpers.calculatePagination(paginationOptions)

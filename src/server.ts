@@ -1,50 +1,45 @@
-/* eslint-disable no-undef */
+import { Server } from 'http'
 import mongoose from 'mongoose'
 import app from './app'
-// import dotenv from 'dotenv'
-// const port = 5050
 import config from './config/index'
-import { infologger, errorLogger } from './shared/logger'
-import { Server } from 'http'
-// dotenv.config()
+import { errorlogger, logger } from './shared/logger'
+
 process.on('uncaughtException', error => {
-  errorLogger.error(error)
+  errorlogger.error(error)
   process.exit(1)
 })
+
 let server: Server
 
-async function DBCoccection() {
-  // console.log(config.database_url)
-  // console.log(config.port)
+async function bootstrap() {
   try {
     await mongoose.connect(config.database_url as string)
-    // await mongoose.connect(process.env.DATABASE_URL as string)
-    infologger.info('database connection successfull')
+    logger.info(`🛢   Database is connected successfully`)
+
     server = app.listen(config.port, () => {
-      infologger.info(`Example app listening on port ${config.port}`)
+      logger.info(`Application  listening on port ${config.port}`)
     })
-    // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
-  } catch (error) {
-    errorLogger.error('server connection failed', error)
+  } catch (err) {
+    errorlogger.error('Failed to connect database', err)
   }
+
   process.on('unhandledRejection', error => {
     if (server) {
       server.close(() => {
-        errorLogger.error(error)
+        errorlogger.error(error)
         process.exit(1)
       })
+    } else {
+      process.exit(1)
     }
-    process.exit(1)
   })
 }
 
-DBCoccection()
+bootstrap()
 
-// console.log(x)
-
-// process.on('SIGTERM', () => {
-//   infologger.info('SIGTERM is received')
-//   if (server) {
-//     server.close()
-//   }
-// })
+process.on('SIGTERM', () => {
+  logger.info('SIGTERM is received')
+  if (server) {
+    server.close()
+  }
+})

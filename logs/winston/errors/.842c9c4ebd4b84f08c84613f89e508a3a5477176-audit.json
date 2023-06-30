@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/shifat/Desktop/saymon-shoab/resume-project/U.M.S/server/logs/winston/errors/.842c9c4ebd4b84f08c84613f89e508a3a5477176-audit.json",
+    "files": [
+        {
+            "date": 1688073092131,
+            "name": "/Users/shifat/Desktop/saymon-shoab/resume-project/U.M.S/server/logs/winston/errors/phu-2023-30-06-03-error.log",
+            "hash": "16a5032f01bacfb1e03cc075364ad44ba437247e51c0ab33c913d1bc68ddba24"
+        },
+        {
+            "date": 1688080762965,
+            "name": "/Users/shifat/Desktop/saymon-shoab/resume-project/U.M.S/server/logs/winston/errors/phu-2023-30-06-05-error.log",
+            "hash": "7def28e1607e6b68fb04ddcb11b506759530f3a956d42d9623e6f41dd202dd72"
+        },
+        {
+            "date": 1688084495575,
+            "name": "/Users/shifat/Desktop/saymon-shoab/resume-project/U.M.S/server/logs/winston/errors/phu-2023-30-06-06-error.log",
+            "hash": "cdf5c9e9d472f8e2cb61b2ba98a08efc9a355799b6fd7bd4a07fe22cbe9e33b4"
+        }
+    ],
+    "hashType": "sha256"
+}

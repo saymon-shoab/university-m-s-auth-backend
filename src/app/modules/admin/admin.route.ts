@@ -1,8 +1,7 @@
 import express from 'express'
-// import validateRequest from '../../middlewares/validateRequest';
+import validateRequest from '../../middlewares/validateRequest'
 import { AdminController } from './admin.controller'
 import { AdminValidation } from './admin.validation'
-import validateRequest from '../../middlewares/validationRequest'
 const router = express.Router()
 
 router.get('/:id', AdminController.getSingleAdmin)

@@ -4,15 +4,15 @@ import mongoose, { SortOrder } from 'mongoose'
 import ApiError from '../../../errors/ApiError'
 import { paginationHelpers } from '../../../helpers/paginationHelper'
 import { IGenericResponse } from '../../../interfaces/common'
+import { IPaginationOptions } from '../../../interfaces/pagination'
 import { User } from '../user/user.model'
+import { adminSearchableFields } from './admin.constant'
 import { IAdmin, IAdminFilters } from './admin.interface'
 import { Admin } from './admin.model'
-import { IPaginationOption } from '../../../interfaces/pagination'
-import { adminSearchableFields } from './ admin.constant'
 
 const getAllAdmins = async (
   filters: IAdminFilters,
-  paginationOptions: IPaginationOption
+  paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IAdmin[]>> => {
   const { searchTerm, ...filtersData } = filters
   const { page, limit, skip, sortBy, sortOrder } =

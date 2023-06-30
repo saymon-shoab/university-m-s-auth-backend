@@ -1,30 +1,31 @@
 import { SortOrder } from 'mongoose'
 import { paginationHelpers } from '../../../helpers/paginationHelper'
 import { IGenericResponse } from '../../../interfaces/common'
-import { IPaginationOption } from '../../../interfaces/pagination'
-import { academicFacultySearchableFields } from './academicFaculty.constant'
+import { IPaginationOptions } from '../../../interfaces/pagination'
+import { academicFacultySearchableFields } from './academicFaculty.constants'
 import {
   IAcademicFaculty,
   IAcademicFacultyFilters,
-} from './academicFaculty.interface'
+} from './academicFaculty.interfaces'
 import { AcademicFaculty } from './academicFaculty.model'
 
 const createFaculty = async (
   payload: IAcademicFaculty
 ): Promise<IAcademicFaculty | null> => {
   const result = await AcademicFaculty.create(payload)
-  // console.log(payload)
   return result
 }
 
 const getAllFaculties = async (
   filters: IAcademicFacultyFilters,
-  paginationOption: IPaginationOption
+  paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IAcademicFaculty[]>> => {
   const { searchTerm, ...filtersData } = filters
   const { page, limit, skip, sortBy, sortOrder } =
-    paginationHelpers.calculatePagination(paginationOption)
+    paginationHelpers.calculatePagination(paginationOptions)
+
   const andConditions = []
+
   if (searchTerm) {
     andConditions.push({
       $or: academicFacultySearchableFields.map(field => ({
@@ -35,6 +36,7 @@ const getAllFaculties = async (
       })),
     })
   }
+
   if (Object.keys(filtersData).length) {
     andConditions.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
@@ -42,6 +44,7 @@ const getAllFaculties = async (
       })),
     })
   }
+
   const sortConditions: { [key: string]: SortOrder } = {}
 
   if (sortBy && sortOrder) {
@@ -56,6 +59,7 @@ const getAllFaculties = async (
     .limit(limit)
 
   const total = await AcademicFaculty.countDocuments()
+
   return {
     meta: {
       page,
@@ -65,6 +69,7 @@ const getAllFaculties = async (
     data: result,
   }
 }
+
 const getSingleFaculty = async (
   id: string
 ): Promise<IAcademicFaculty | null> => {
@@ -88,6 +93,7 @@ const deleteByIdFromDB = async (
   const result = await AcademicFaculty.findByIdAndDelete(id)
   return result
 }
+
 export const AcademicFacultyService = {
   createFaculty,
   getAllFaculties,
