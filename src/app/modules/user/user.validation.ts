@@ -1,7 +1,7 @@
-import { z } from 'zod'
-import { bloodGroup, gender } from './user.constant'
+import { z } from 'zod';
+import { bloodGroup, gender } from '../student/student.constant';
 
-const createStudentZodSchema = z.object({
+const createUserZodSchema = z.object({
   body: z.object({
     password: z.string().optional(),
 
@@ -88,8 +88,8 @@ const createStudentZodSchema = z.object({
       profileImage: z.string().optional(),
     }),
   }),
-})
-// await createUserZodSchema.parseAsync(req)
+});
+
 const createFacultyZodSchema = z.object({
   body: z.object({
     password: z.string().optional(),
@@ -145,7 +145,7 @@ const createFacultyZodSchema = z.object({
       profileImage: z.string().optional(),
     }),
   }),
-})
+});
 
 const createAdminZodSchema = z.object({
   body: z.object({
@@ -207,10 +207,10 @@ const createAdminZodSchema = z.object({
       profileImage: z.string().optional(),
     }),
   }),
-})
+});
 
 export const UserValidation = {
-  createStudentZodSchema,
+  createUserZodSchema,
   createFacultyZodSchema,
   createAdminZodSchema,
-}
+};

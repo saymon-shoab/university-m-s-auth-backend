@@ -1,0 +1,45 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/successes/.eacc421f70d4692671903967365f3324ea5be534-audit.json",
+    "files": [
+        {
+            "date": 1687997115396,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/successes/phu-2023-29-06-06-success.log",
+            "hash": "cfa1b7cbe4f66dbb534a3b601cae8a06d2229a88daaaaa84168938bbbf2ed1ed"
+        },
+        {
+            "date": 1688043425588,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/successes/phu-2023-29-06-18-success.log",
+            "hash": "f2ab2423b30162c260f839ceb52a5f3a0ab14eed103440660c69768bf32a6eec"
+        },
+        {
+            "date": 1688069855768,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/successes/phu-2023-30-06-02-success.log",
+            "hash": "5c5d751892688420bb105ffb16069168ec427a62bfbe345fa436794b7f6e843c"
+        },
+        {
+            "date": 1688173371651,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/successes/phu-2023-01-07-07-success.log",
+            "hash": "f3ad7dc5e2e8b511feb50b650ff12769554fb8cdac5e72ecc134d0f0f27833f9"
+        },
+        {
+            "date": 1688237846752,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/successes/phu-2023-02-07-00-success.log",
+            "hash": "5384fa3c10a85f75705fa592bb5179aca5579204ff70a048a9b7223ed3daa670"
+        },
+        {
+            "date": 1688410086463,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/successes/phu-2023-04-07-00-success.log",
+            "hash": "0821776f5e262cb45793eb35a723e28000760bdf51f1a5d3f878492d5c4fe2f2"
+        },
+        {
+            "date": 1688412752195,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/successes/phu-2023-04-07-01-success.log",
+            "hash": "ad0e8cff4492c44475d53276ab30f2ae8d53325adacbcfc1f520ad81fd105ca9"
+        }
+    ],
+    "hashType": "sha256"
+}

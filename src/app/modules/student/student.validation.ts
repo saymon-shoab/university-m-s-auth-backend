@@ -1,5 +1,5 @@
-import { z } from 'zod'
-import { bloodGroup, gender } from './student.constant'
+import { z } from 'zod';
+import { bloodGroup, gender } from '../student/student.constant';
 
 const updateStudentZodSchema = z.object({
   body: z.object({
@@ -40,8 +40,8 @@ const updateStudentZodSchema = z.object({
       .optional(),
     profileImage: z.string().optional(),
   }),
-})
+});
 
 export const StudentValidaion = {
   updateStudentZodSchema,
-}
+};

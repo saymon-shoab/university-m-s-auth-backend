@@ -1,18 +1,14 @@
-import { Schema, model } from 'mongoose'
+import httpStatus from 'http-status';
+import { Schema, model } from 'mongoose';
+import ApiError from '../../../errors/ApiError';
 import {
-  IAcademicSemester,
-  AcademicSeesterModel,
-} from './academicSemester.interface'
-import {
-  academicSemesterCode,
-  academicSemesterMonth,
+  academicSemesterCodes,
   academicSemesterTitles,
-} from './academicSemester.constant'
-import ApiError from '../../../errors/ApiError'
-import status from 'http-status'
-// user Schema...
+  acdemicSemesterMonths,
+} from './academicSemester.constant';
+import { IAcademicSemester } from './academicSemester.interface';
 
-const academicSeesterSchema = new Schema<IAcademicSemester>(
+const academicSemesterSchema = new Schema<IAcademicSemester>(
   {
     title: {
       type: String,
@@ -26,17 +22,17 @@ const academicSeesterSchema = new Schema<IAcademicSemester>(
     code: {
       type: String,
       required: true,
-      enum: academicSemesterCode,
+      enum: academicSemesterCodes,
     },
     startMonth: {
       type: String,
       required: true,
-      enum: academicSemesterMonth,
+      enum: acdemicSemesterMonths,
     },
     endMonth: {
       type: String,
       required: true,
-      enum: academicSemesterMonth,
+      enum: acdemicSemesterMonths,
     },
   },
   {
@@ -45,19 +41,23 @@ const academicSeesterSchema = new Schema<IAcademicSemester>(
       virtuals: true,
     },
   }
-)
-academicSeesterSchema.pre('save', async function (next) {
+);
+
+academicSemesterSchema.pre('save', async function (next) {
   const isExist = await AcademicSemester.findOne({
     title: this.title,
     year: this.year,
-  })
+  });
   if (isExist) {
-    throw new ApiError(status.CONFLICT, 'ACADEMIC SEMESTER ALREADY EXIST')
+    throw new ApiError(
+      httpStatus.CONFLICT,
+      'Academic semester is already exist !'
+    );
   }
-  next()
-})
+  next();
+});
 
-export const AcademicSemester = model<IAcademicSemester, AcademicSeesterModel>(
+export const AcademicSemester = model<IAcademicSemester>(
   'AcademicSemester',
-  academicSeesterSchema
-)
+  academicSemesterSchema
+);

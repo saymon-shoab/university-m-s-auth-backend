@@ -1,0 +1,35 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/errors/.5834027f87b1899a90776cc4bbd7245862c5d660-audit.json",
+    "files": [
+        {
+            "date": 1687997115402,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/errors/phu-2023-29-06-06-error.log",
+            "hash": "f0eca29eb75f90ed8f0407d294a43f9cfbedc47393242b808fa8e2b8a3621350"
+        },
+        {
+            "date": 1688043425592,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/errors/phu-2023-29-06-18-error.log",
+            "hash": "4c5b00c206511487f562326a5aa98a548c274d3fdf93c5bf26b3222ea59e4eb2"
+        },
+        {
+            "date": 1688069855772,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/errors/phu-2023-30-06-02-error.log",
+            "hash": "194be2cff85bdbfe167f14e9bd2dc74b433a9262204ad239812d2f2fa792bbe8"
+        },
+        {
+            "date": 1688173371655,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/errors/phu-2023-01-07-07-error.log",
+            "hash": "77b0b16b83c69acab4d77aa2f73345f139c35b15da1b2cefd0d3062d50fb56bd"
+        },
+        {
+            "date": 1688410086468,
+            "name": "/home/saymon/web-2/UMS/university-m-s-auth-backend/logs/winston/errors/phu-2023-04-07-00-error.log",
+            "hash": "c4bb6a15fe27df06d00189918c324f1b647c83dfa8c591a280fea0ee80c99b83"
+        }
+    ],
+    "hashType": "sha256"
+}
