@@ -46,7 +46,7 @@ const academicSemesterSchema = new Schema<IAcademicSemester>(
 academicSemesterSchema.pre('save', async function (next) {
   const isExist = await AcademicSemester.findOne({
     title: this.title,
-    year: this.year,
+    year: this.year || 2022,
   });
   if (isExist) {
     throw new ApiError(

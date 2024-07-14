@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/successes/.70eac2ae7222592102354383b1007a51760a10fc-audit.json",
+    "files": [
+        {
+            "date": 1720990930150,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/successes/phu-2024-15-07-03-success.log",
+            "hash": "d6443f8c045d0583ae18bab3004ae8b4b54f7184525083e1249191e5b30ee88d"
+        }
+    ],
+    "hashType": "sha256"
+}
