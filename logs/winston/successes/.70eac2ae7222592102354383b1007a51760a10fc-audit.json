@@ -84,6 +84,11 @@
             "date": 1722055805653,
             "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/successes/phu-2024-27-07-10-success.log",
             "hash": "ae5984083eaaac97830e5109cecbac737e44415bc3789b1419fbc4e89dea181c"
+        },
+        {
+            "date": 1722081452625,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/successes/phu-2024-27-07-17-success.log",
+            "hash": "597b489d669cae9a850bbce18f8c011808f1cc8c4e3889955f7e2e2340f5be65"
         }
     ],
     "hashType": "sha256"
