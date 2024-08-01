@@ -1,6 +1,7 @@
 import { Model } from 'mongoose';
 
 export type IAcademicFaculty = {
+  syncId: string
   title: string;
 };
 

@@ -10,7 +10,7 @@ import {
 } from './academicSemester.constant';
 import {
   IAcademicSemester,
-  IAcademicSemesterEvent,
+  IAcademicSemesterCreatedEvent,
   IAcademicSemesterFilters,
 } from './academicSemester.interface';
 import { AcademicSemester } from './academicSemester.model';
@@ -138,7 +138,7 @@ const deleteSemester = async (
 
 
 const createSemesterFromEvent = async (
-  e: IAcademicSemesterEvent
+  e: IAcademicSemesterCreatedEvent
 ): Promise<void> => {
   
    await AcademicSemester.create({
@@ -153,7 +153,7 @@ const createSemesterFromEvent = async (
 };
 
 
-const updateOneIntoDbFromEvent = async(e:IAcademicSemesterEvent):Promise<void>=> {
+const updateOneIntoDbFromEvent = async(e:IAcademicSemesterCreatedEvent):Promise<void>=> {
     await AcademicSemester.findOneAndUpdate(
       {syncId: e.id},
       {

@@ -21,7 +21,7 @@ const refreshTokenZodSchema = z.object({
 
 
 const changePasswordZodSchema = z.object({
-  cookies: z.object({
+  body: z.object({
     oldPassword: z.string({
       required_error: 'Old Password is required',
     }),

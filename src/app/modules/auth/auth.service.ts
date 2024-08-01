@@ -97,28 +97,29 @@ const refreshToken = async (token: string): Promise<IRefreshTokenResponse> => {
 const changePassword = async (user: JwtPayload | null, payload:IChangePassword) => {
  
   const {oldPassword,newPassword} = payload;
-  const isUserExist = await User.isUserExist(user?.userId)
+
+  const isUserExist = await User.findOne({ id: user?.userId }).select(
+    '+password'
+  );
+
   if (!isUserExist) {
-    throw new ApiError(httpStatus.UNAUTHORIZED, "User Dose Not Exist")
+    throw new ApiError(httpStatus.NOT_FOUND, 'User does not exist');
   }
 
-  if (isUserExist.password && 
-     !(await User.isPasswordMatched(oldPassword,isUserExist.password))
-    ) {
-    throw new ApiError(httpStatus.UNAUTHORIZED, "Old Password is Incorrect")
+  // checking old password
+  if (
+    isUserExist.password &&
+    !(await User.isPasswordMatched(oldPassword, isUserExist.password))
+  ) {
+    throw new ApiError(httpStatus.UNAUTHORIZED, 'Old Password is incorrect');
   }
 
-  // hass password before saveing ...
-  const newHashedPassword = await bcrypt.hash(newPassword,config.bycrypt_salt_rounds as string)
+  isUserExist.password = newPassword;
+  isUserExist.needsPasswordChange = false;
 
+  // updating using save()
+  isUserExist.save();
 
-  // update password ....
-  const updateData = {
-    password: newHashedPassword,
-    needPasswordChange:false,
-    passwordChangedAd: new Date
-  }
-   await User.findOneAndUpdate({id:user?.userId}, updateData )
 
 };
 

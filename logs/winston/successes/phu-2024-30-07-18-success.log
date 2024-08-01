@@ -1,0 +1,5 @@
+Tue Jul 30 2024 18:29:35 } [PH] info: SIGTERM is received
+Tue Jul 30 2024 18:31:19 } [PH] info: redis connected
+Tue Jul 30 2024 18:31:23 } [PH] info: 🛢   Database is connected successfully
+Tue Jul 30 2024 18:31:23 } [PH] info: Application  listening on port 5050
+Tue Jul 30 2024 18:34:29 } [PH] info: SIGTERM is received

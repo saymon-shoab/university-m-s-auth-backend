@@ -17,6 +17,8 @@ import {
   generateFacultyId,
   generateStudentId,
 } from './user.utils';
+import { RedisClient } from '../../../shared/redis';
+import { EVENT_FACULTY_CREATED, EVENT_STUDENT_CREATED } from './user.constant';
 
 const createStudent = async (
   student: IStudent,
@@ -26,28 +28,18 @@ const createStudent = async (
   if (!user.password) {
     user.password = config.default_student_pass as string;
   }
-
   // set role
   user.role = 'student';
-
   const academicsemester = await AcademicSemester.findById(
     student.academicSemester
   ).lean();
-  // const academicsemester = {
-  //   code : '01',
-  //   year: '2020'
-  // }
-  // generate student id
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {
     session.startTransaction();
-
     const id = await generateStudentId(academicsemester as IAcademicSemester);
-
     user.id = id;
     student.id = id;
-
     //array
     const newStudent = await Student.create([student], { session });
 
@@ -72,7 +64,6 @@ const createStudent = async (
     await session.endSession();
     throw error;
   }
-
   if (newUserAllData) {
     newUserAllData = await User.findOne({ id: newUserAllData.id }).populate({
       path: 'student',
@@ -89,7 +80,10 @@ const createStudent = async (
       ],
     });
   }
-
+  console.log(newUserAllData)
+  if (newUserAllData) {
+    await RedisClient.publish(EVENT_STUDENT_CREATED, JSON.stringify(newUserAllData.student))
+  }
   return newUserAllData;
 };
 
@@ -151,7 +145,9 @@ const createFaculty = async (
       ],
     });
   }
-
+  if (newUserAllData) {
+    RedisClient.publish(EVENT_FACULTY_CREATED, JSON.stringify(newUserAllData.faculty))
+  } 
   return newUserAllData;
 };
 const createAdmin = async (

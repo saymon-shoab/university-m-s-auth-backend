@@ -6,56 +6,6 @@
     "auditLog": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/.d0191376a457cd5c7cefe9e0d9edf101cba3a51c-audit.json",
     "files": [
         {
-            "date": 1720990930154,
-            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-15-07-03-error.log",
-            "hash": "4f8c3810a26efdf89c9add698bcd20c181bd7ece80b26d6fcc91a5e559177ed1"
-        },
-        {
-            "date": 1720994855286,
-            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-15-07-04-error.log",
-            "hash": "17567210a20db1afd45d1750101db557dbbc2e0454ac9e61cfd01a3855653011"
-        },
-        {
-            "date": 1721060622425,
-            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-15-07-22-error.log",
-            "hash": "fc807aea4ffa6351517ffcce8414abce4892605fc93322572101031e215548d7"
-        },
-        {
-            "date": 1721097710224,
-            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-16-07-08-error.log",
-            "hash": "f3530b8f760c1c1296e4ee440e8f783c1bb83e9856a4667018b664ee5d8fe88a"
-        },
-        {
-            "date": 1721110491170,
-            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-16-07-12-error.log",
-            "hash": "d7e1eb962fcc785b98a724bb47a8477a493dc6c7ad6aafd046bab7f2e8950772"
-        },
-        {
-            "date": 1721139694413,
-            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-16-07-20-error.log",
-            "hash": "62a68eb0356f74f76a48db6a84068bbc1a4073b36874195f28e7b8f8bd676d58"
-        },
-        {
-            "date": 1721153206315,
-            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-17-07-00-error.log",
-            "hash": "b6ed111486f259129c33734bc36c34da190e74e375de9dafcc6e29e45d26bc1d"
-        },
-        {
-            "date": 1721156441339,
-            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-17-07-01-error.log",
-            "hash": "923a6450f466d5e41a0989e0dcea76f251bf27c4a361654428129ad3a2c5b906"
-        },
-        {
-            "date": 1721164034790,
-            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-17-07-03-error.log",
-            "hash": "523b0f4237d862814adc8b143366adf78799d3d4921c4aaaa7d055106c222057"
-        },
-        {
-            "date": 1721168290128,
-            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-17-07-04-error.log",
-            "hash": "f558985ea3b908e980fb2123addc3ca65792097d9191f43092a3c007e542b256"
-        },
-        {
             "date": 1721882596299,
             "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-25-07-10-error.log",
             "hash": "173643b926070e9459e61e1d4884f7c909b0d65dfe374e6da9463bb441b8e638"
@@ -79,6 +29,101 @@
             "date": 1722055805685,
             "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-27-07-10-error.log",
             "hash": "e12c9c71e858c0664301d485fe84aa44db75a6b06e740506e740ef33c39ef3c4"
+        },
+        {
+            "date": 1722084037076,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-27-07-18-error.log",
+            "hash": "4c078fd8b4c5e95733c5a3dbf855b8c7f25722a23eea095b202d071b4927a8e6"
+        },
+        {
+            "date": 1722088636237,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-27-07-19-error.log",
+            "hash": "667caea6534f26b1abbf8cd113aaca40b00ac3270c9cf332593fa97f0b1b86b6"
+        },
+        {
+            "date": 1722089091218,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-27-07-20-error.log",
+            "hash": "a91fe62c38404637bfd81698dc5534808f7f2a0343760182fb030710874117f6"
+        },
+        {
+            "date": 1722154958021,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-28-07-14-error.log",
+            "hash": "5c2eec25801128c91def9ee899d3dd66c7742a3661d342b053b22d5e76389cf8"
+        },
+        {
+            "date": 1722173452905,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-28-07-19-error.log",
+            "hash": "43fbcb4cabfbc04ce367c2a2155959672465142edb29c317264f272e9ab65705"
+        },
+        {
+            "date": 1722186923611,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-28-07-23-error.log",
+            "hash": "e7c489a690070bd7352cfa1d2ad79c352c180361d5440eff544300ed210877d6"
+        },
+        {
+            "date": 1722229326355,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-29-07-11-error.log",
+            "hash": "57630864290cfd790cc9ef4fda19eb1c45e2d497f9c248bb610446320f0c05ff"
+        },
+        {
+            "date": 1722235386811,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-29-07-12-error.log",
+            "hash": "1eb746cbaa30de5f9754b65afa82f282a980fe4f0006ee9e50be2ae06268cda0"
+        },
+        {
+            "date": 1722247205771,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-29-07-16-error.log",
+            "hash": "c1367126b2278fba67a67faef4faff8599fa3058e8e2b65f8aaa71cd6fa4cbc2"
+        },
+        {
+            "date": 1722252528350,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-29-07-17-error.log",
+            "hash": "7144f00c638296c76dafeae327f1413b376c30abd8d423561f5b29a3fa353d7a"
+        },
+        {
+            "date": 1722316590728,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-30-07-11-error.log",
+            "hash": "d066cffbbc722f16ae9f3faea39eb70424e53586efe25e7f8309b6ac7980e8e7"
+        },
+        {
+            "date": 1722319609396,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-30-07-12-error.log",
+            "hash": "89bcffbe3d04f63c20ad06bd6470f9de385563b781e630b9f58ebdc9b41ed6ac"
+        },
+        {
+            "date": 1722329285148,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-30-07-14-error.log",
+            "hash": "1f6bdd5dccd73bd5bdcbd73da3bec41ccc1b03d8747df17b42abedac93e7e11f"
+        },
+        {
+            "date": 1722331266615,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-30-07-15-error.log",
+            "hash": "af87b90ff5cd31ab837e78611a82e114cf04d90e8ee648d8333a6d7e9faa2e04"
+        },
+        {
+            "date": 1722342679206,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-30-07-18-error.log",
+            "hash": "2332ab918e6e581f51dc82fd993d0318659d5cfcd01180533b89e7abb13cf9ba"
+        },
+        {
+            "date": 1722345713238,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-30-07-19-error.log",
+            "hash": "60356b2104ee1be9fae93114cebc19377ba3bcbca13f8852e98385f62001edac"
+        },
+        {
+            "date": 1722419722590,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-31-07-15-error.log",
+            "hash": "03980b146316e9e00a1a10e563a27f684e239eab20915a4aa434ec746cf947af"
+        },
+        {
+            "date": 1722502668111,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-01-08-14-error.log",
+            "hash": "56afd4455745efedb503c16d8b597f5251bf532911059375cacaf15cde3865c8"
+        },
+        {
+            "date": 1722522699387,
+            "name": "/Users/saymon/Desktop/projects/level-2/university-m-s-auth-backend/logs/winston/errors/phu-2024-01-08-20-error.log",
+            "hash": "f3156b620e92c307140419e925bf4280fad4d6b95c82ac804c8dda9b8d30401d"
         }
     ],
     "hashType": "sha256"

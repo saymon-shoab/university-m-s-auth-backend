@@ -1,0 +1,12 @@
+Thu Aug 01 2024 20:31:5 } [PH] info: SIGTERM is received
+Thu Aug 01 2024 20:31:39 } [PH] info: redis connected
+Thu Aug 01 2024 20:31:44 } [PH] info: 🛢   Database is connected successfully
+Thu Aug 01 2024 20:31:44 } [PH] info: Application  listening on port 5050
+Thu Aug 01 2024 20:40:47 } [PH] info: SIGTERM is received
+Thu Aug 01 2024 20:44:56 } [PH] info: redis connected
+Thu Aug 01 2024 20:45:2 } [PH] info: 🛢   Database is connected successfully
+Thu Aug 01 2024 20:45:2 } [PH] info: Application  listening on port 5050
+Thu Aug 01 2024 20:45:22 } [PH] info: SIGTERM is received
+Thu Aug 01 2024 20:47:53 } [PH] info: redis connected
+Thu Aug 01 2024 20:47:57 } [PH] info: 🛢   Database is connected successfully
+Thu Aug 01 2024 20:47:57 } [PH] info: Application  listening on port 5050

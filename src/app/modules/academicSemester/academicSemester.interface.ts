@@ -33,11 +33,11 @@ export type IAcademicSemesterFilters = {
   searchTerm?: string;
 };
 
-export type IAcademicSemesterEvent = {
-  id: any | string;
-  title: IAcademicSemesterTitles;
-  year: number;
-  code: IAcademicSemesterCodes;
-  startMonth: IAcademicSemesterMonths;
-  endMonth: IAcademicSemesterMonths;
+export type IAcademicSemesterCreatedEvent = {
+  id: string;
+  title: string;
+  year: string;
+  code: string;
+  startMonth: string;
+  endMonth: string;
 };
